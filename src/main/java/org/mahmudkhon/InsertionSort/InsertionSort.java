@@ -26,6 +26,9 @@ public class InsertionSort {
                     arrayList.set(j,temp);
 
                 }
+                else {
+                    break;
+                }
                 j--;
 
 
