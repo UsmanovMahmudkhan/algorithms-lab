@@ -8,7 +8,11 @@ public class Nodes {
          root.left.left=new Node(20);
          root.left.right=new Node(40);
 
-        System.out.println(root.left.left.data);
+         Node current = root;
+         current = current.left;
+         current.right = new Node(35);
+
+        System.out.println(root.left.right.data);
 
 
 
