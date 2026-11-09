@@ -16,21 +16,22 @@ public class InsertionForTree {
         Node root = null;
 
         root = insert(root, 50);
-        System.out.println(root.data);
+       // System.out.println(root.data);
 
         root = insert(root, 30);
-        System.out.println(root.data);
+      //  System.out.println(root.data);
 
         root = insert(root, 70);
-        System.out.println(root.data);
+     //   System.out.println(root.data);
 
         root = insert(root, 20);
-        System.out.println(root.data);
+     //   System.out.println(root.data);
         root = insert(root, 40);
 
-        System.out.println(root.left.left.data);
+        //System.out.println(root.left.left.data);
 
        // System.out.println(root.left.left.data);
+        print(root);
     }
 
     public static Node insert(Node root, int i) {
@@ -45,5 +46,15 @@ public class InsertionForTree {
         }
 
         return root;
+    }
+
+    public static void print(Node node){
+       if(node==null){
+           return;
+       }
+       print(node.left);
+       System.out.println(node.data);
+       print(node.right);
+
     }
 }
