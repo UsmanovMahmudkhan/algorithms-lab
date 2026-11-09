@@ -22,27 +22,27 @@ public class UsingContainsMethod {
         node.left.right = new Node(40);
 
         System.out.println(contains(node, 40));
-        System.out.println(contains(node, 70));
+        System.out.println(contains(node, 120));
     }
 
     public static boolean contains(Node current, int target) {
-       boolean contains=false;
-
-        while (current != null) {
-            if (current.data == target) {
-                contains=true;
-                break;
-            }
-            else if (current.data > target) {
-                current = current.left;
-            }
-            else if (current.data < target) {
-                current = current.right;
-            }
+        boolean contains=false;
+        if(current==null){
+            return contains;
         }
 
-        return contains;
+            if(current.data==target) {
+                contains=true;
+            }
+            else if (current.data>target) {
+                return contains(current.left,target);
+            }
+            else if(current.data<target){
+                return contains(current.right,target);
+            }
 
+
+        return contains;
     }
 
 
